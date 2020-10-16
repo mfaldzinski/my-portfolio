@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MFaldzinski.pl</title>
-    <!-- google font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!-- font awesome 5 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <!-- slick css cdn -->
@@ -33,6 +30,7 @@
                     <li><a href="#serviceBlock">oferta</a></li>
                     <li><a href="#portfolioBlock">portfolio</a></li>
                     <li><a href="#contactBlock">kontakt</a></li>
+                    <li><a class="switch" href="#">Dark mode: <span class="inner-switch">OFF</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -42,13 +40,16 @@
     <main>
 
         <!-- hero block -->
-        <section class="heroBlock" style="background-image: url('images/bgnew.jpg');">
+        <section class="heroBlock">
             <div class="container">
                 <h2 class="text-header"><span>Maciej</span> Fałdziński</h2>
                 <p>
                     #FRONT-END DEVELOPER
                 </p>
-                <a href="#" class="btn">napisz do mnie</a>
+                <p class="small_info">
+                    strony www, fora dyskusyjne, blogi, sklepy internetowe
+                </p>
+                <a href="#contactBlock" class="btn">napisz do mnie</a>
             </div>
         </section>
 
@@ -59,7 +60,7 @@
                 <hr>
                 <div class="row">
                     <div class="column">
-                        <img class="avatar" src="/images/ava.jpg">
+                        <img class="avatar" src="images/ava.jpg" alt="avatar">
                     </div>
                     <div class="column">
                         <p>
@@ -78,7 +79,7 @@
         <!-- service block -->
         <section id="serviceBlock" class="block serviceBlock">
             <div class="container">
-                <h2>dlaczego warto mnie wybrać?</h2>
+                <h2>dlaczego warto wybrać mnie?</h2>
                 <hr>
                 <div class="threeColumn">
                     <!-- column -->
@@ -155,12 +156,12 @@
                 <hr>
                 <div class="row" style="padding-bottom: 20px;">
                     <div class="column">
-                        <img src="/images/portfolio/grabski.png">
+                        <img src="images/portfolio/grabski.png">
                     </div>
                     <div class="column">
                         <h3>www.grabski.edu.pl</h3>
                         <p>Główna strona rekrutacji do Zespół Szkół nr.3 im. Władysława Grabskiego w Kutnie.</p>
-                        <a href="#" class="btn-portfolio"><i class="fas fa-eye"></i> live</a><br /><br />
+                        <a href="http://rekrutacja.grabski.edu.pl/" class="btn-portfolio"><i class="fas fa-eye"></i> live</a><br /><br />
                         <a href="#" class="btn-portfolio-github"><i class="fab fa-github"></i> github</a>
                     </div>
                 </div>
@@ -169,26 +170,26 @@
                     <div class="column">
                         <h3>www.gameover.com.pl</h3>
                         <p>Strona główna Pub'u Game Over w Kutnie.</p>
-                        <a href="#" class="btn-portfolio"><i class="fas fa-eye"></i> live</a><br /><br />
+                        <a href="http://gameover.com.pl/" class="btn-portfolio"><i class="fas fa-eye"></i> live</a><br /><br />
                         <a href="#" class="btn-portfolio-github"><i class="fab fa-github"></i> github</a>
                     </div>
                     <div class="column">
-                        <img src="/images/portfolio/game.png">
+                        <img src="images/portfolio/game.png">
                     </div>
                 </div>
 
                 <div class="row" style="padding-bottom: 20px;">
                     <div class="column">
-                        <img src="/images/portfolio/mim.png">
+                        <img src="images/portfolio/mim.png">
                     </div>
                     <div class="column">
                         <h3>www.mimmaking.pl</h3>
                         <p>Strona główna MiMMaking - Produkcja filmowa Małgorzata Cichońska</p>
-                        <a href="#" class="btn-portfolio"><i class="fas fa-eye"></i> live</a><br /><br />
+                        <a href="http://mimmaking.pl/" class="btn-portfolio"><i class="fas fa-eye"></i> live</a><br /><br />
                         <a href="#" class="btn-portfolio-github"><i class="fab fa-github"></i> github</a>
                     </div>
                 </div><br /><br />
-                <a href="#" class="btn-github"><i class="fab fa-github"></i> sprawdź wszystkie moje prace</a>
+                <a href="https://github.com/mfaldzinski" class="btn-github"><i class="fab fa-github"></i> sprawdź wszystkie moje prace</a>
             </div>
         </section>
         <!-- opinion block -->
@@ -256,14 +257,14 @@
     <footer id="footer">
         <div class="container">
             <div class="followUs">
-                <h4>kontakt ze mną</h4>
+                <h4>social media</h4>
                 <ul class="socialMedia">
                     <li>
-                        <i class="fab fa-facebook fa-2x"></i>
+                        <a href="https://www.facebook.com/maciekfaldzinski"><i class="fab fa-facebook fa-2x"></i></a>
 
                     </li>
                     <li>
-                        <i class="fab fa-instagram fa-2x"></i>
+                        <a href="https://www.instagram.com/macieeekkkk/"><i class="fab fa-instagram fa-2x"></i></a>
 
                     </li>
                 </ul>
@@ -343,9 +344,18 @@
                 }
             });
 
-
-
         }
+    </script>
+    <script>
+        $(".inner-switch").on("click", function() {
+            if ($("body").hasClass("dark")) {
+                $("body").removeClass("dark");
+                $(".inner-switch").text("OFF");
+            } else {
+                $("body").addClass("dark");
+                $(".inner-switch").text("ON");
+            }
+        });
     </script>
 </body>
 
