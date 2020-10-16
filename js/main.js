@@ -53,8 +53,6 @@ $(window).scroll(function() {
     scrollIndicator();
 });
 
-
-
 /* 
 ---------
 Go to Top
