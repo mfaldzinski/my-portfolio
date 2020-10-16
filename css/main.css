@@ -19,117 +19,6 @@ body {
     background: #fffffe;
 }
 
-
-/* DARK MODE */
-
-.dark {
-    background: #2b2c34;
-    color: #fffffe;
-}
-
-.dark h2.text-header {
-    color: #fffffe;
-}
-
-.dark .heroBlock {
-    color: #fffffe;
-}
-
-.dark h2 {
-    color: #fffffe;
-}
-
-.dark .btn-github {
-    border: 2px solid #fffffe;
-    background: none;
-    color: #fffffe;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px 30px;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.dark .btn-github:hover {
-    color: #2b2c34;
-    background: #fffffe;
-    font-weight: 700 !important;
-    letter-spacing: 3px;
-    -webkit-box-shadow: 0px 5px 40px -10px #fffffe;
-    -moz-box-shadow: 0px 5px 40px -10px ##fffffe;
-    transition: all 0.3s ease 0s;
-}
-
-.dark .btn-github:before {
-    content: '';
-    background: #fffffe;
-    width: 5%;
-    color: #2b2c34;
-    position: absolute;
-    top: -45px;
-    bottom: -45px;
-    left: -15px;
-    z-index: -1;
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
-    -webkit-transition: width 0.2s linear;
-    transition: width 0.2s linear;
-}
-
-.dark .btn-github:hover:before {
-    width: 150%;
-}
-
-.dark .btn-portfolio-github {
-    border: 2px solid #fffffe;
-    background: none;
-    color: #fffffe;
-    display: inline-block;
-    vertical-align: top;
-    padding: 10px 30px;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.dark .btn-portfolio-github:hover {
-    color: #2b2c34;
-    background: #fffffe;
-    font-weight: 700 !important;
-    letter-spacing: 3px;
-    -webkit-box-shadow: 0px 5px 40px -10px #fffffe;
-    -moz-box-shadow: 0px 5px 40px -10px ##fffffe;
-    transition: all 0.3s ease 0s;
-}
-
-.dark .btn-portfolio-github:before {
-    content: '';
-    background: #fffffe;
-    width: 5%;
-    color: #2b2c34;
-    position: absolute;
-    top: -45px;
-    bottom: -45px;
-    left: -15px;
-    z-index: -1;
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
-    -webkit-transition: width 0.2s linear;
-    transition: width 0.2s linear;
-}
-
-.dark .btn-portfolio-github:hover:before {
-    width: 150%;
-}
-
-
-/* END DARK MODE */
-
 .container {
     max-width: 1170px;
     padding: 0 15px;
@@ -158,6 +47,16 @@ h2 {
 
 h3 {
     font-size: 24px;
+}
+
+
+.title_portfolio {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p_portfolio {
+    margin: 0 0 25px;
 }
 
 h4 {
@@ -735,37 +634,6 @@ textarea:focus {
     font-weight: bold;
 }
 
-#nav a.switch {
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: #6246ea;
-    font-weight: bold;
-    align-self: flex-end;
-    margin: 0.9375rem;
-}
-
-#nav a.switch::after {
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: #6246ea;
-    font-weight: bold;
-    align-self: flex-end;
-}
-
-.inner-switch {
-    display: inline-block;
-    cursor: pointer;
-    border: 1px solid #555;
-    border-radius: 1.25rem;
-    width: 3.125rem;
-    text-align: center;
-    font-size: 1rem;
-    padding: 0.1875rem;
-    margin-left: 0.3125rem;
-}
-
 
 /* 
   ------
@@ -978,6 +846,13 @@ hr {
     }
     h3 {
         font-size: 20px;
+    }
+    .title_portfolio {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .p_portfolio {
+        font-size: 12px;
     }
     h1,
     h2,
