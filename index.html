@@ -227,30 +227,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- contact block -->
-        <section id="contactBlock" class="block contactBlock">
-            <div class="container">
-                <h2>skontaktuj się ze mną</h2>
-                <hr>
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST" onsubmit="return validateForm()">
-                    <label for="name">twoje imię</label>
-                    <input type="text" id="name" name="name">
-                    <label for="email">twój adres e-mail</label>
-                    <input type="text" id="email" name="email">
-                    <label for="sub">temat</label>
-                    <input type="text" id="sub" name="sub">
-                    <label for="message">twoja wiadomość</label>
-                    <textarea id="message" name="message" rows="3"></textarea>
-                    <br />
-                    <input type="checkbox" class="custom-control-input" name="check" id="check">
-                    <label class="custom-control-label" for="check"><u>Wyrażam zgodę</u> na przetwarzanie moich danych osobowych zgodnie z rozporządzeniem o ochronie danych osobowych - <b>#RODO</b></label>
-                </form>
-                <br />
-                <a class="btn" onclick="validateForm()" style="font-size: 14px;"><i class="far fa-paper-plane"></i> wyślij wiadomość</a><br />
-                <div class="status" id="status"></div>
-            </div>
-        </section>
     </main>
     <!-- footer -->
     <footer id="footer">
@@ -264,6 +240,10 @@
                     </li>
                     <li>
                         <a href="https://www.instagram.com/macieeekkkk/"><i class="fab fa-instagram fa-2x"></i></a>
+
+                    </li>
+                    <li>
+                        <a href="mailto:faldzina99@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
 
                     </li>
                 </ul>
@@ -286,76 +266,6 @@
     <!-- main js -->
     <script src="js/main.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        function validateForm() {
-            var x = document.getElementById('name').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Pole 'imię' nie może być puste!";
-                return false;
-            }
-            x = document.getElementById('email').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Pole 'e-mail' nie może być puste!";
-                return false;
-            } else {
-                var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                if (!re.test(x)) {
-                    document.getElementById('status').innerHTML = "Zły format maila";
-                    return false;
-                }
-            }
-            x = document.getElementById('sub').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Pole 'temat' nie może być puste!";
-                return false;
-            }
-            x = document.getElementById('message').value;
-            if (x == "") {
-                document.getElementById('status').innerHTML = "Pole 'wiadomość' nie może być puste!";
-                return false;
-            }
-            if (document.getElementById('check').checked == false) {
-                document.getElementById('status').innerHTML = "Musisz wyrazić zgodę na przetwarzanie swoich danych";
-                return false;
-            }
-            document.getElementById('status').innerHTML = "Wysyłanie...";
-            formData = {
-                'name': $('input[name=name]').val(),
-                'email': $('input[name=email]').val(),
-                'sub': $('input[name=sub]').val(),
-                'message': $('textarea[name=message]').val(),
-                'check': $('input[name=check]').val()
-            };
-
-
-            $.ajax({
-                url: "mail.php",
-                type: "POST",
-                data: formData,
-                success: function(data, textStatus, jqXHR) {
-
-                    $('#status').text(data.message);
-                    if (data.code) //If mail was sent successfully, reset the form.
-                        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
-                },
-                error: function(jqXHR, textStatus, errorThrown) {
-                    $('#status').text(jqXHR);
-                }
-            });
-
-        }
-    </script>
-    <script>
-        $(".inner-switch").on("click", function() {
-            if ($("body").hasClass("dark")) {
-                $("body").removeClass("dark");
-                $(".inner-switch").text("OFF");
-            } else {
-                $("body").addClass("dark");
-                $(".inner-switch").text("ON");
-            }
-        });
-    </script>
 </body>
 
 </html>
