@@ -417,6 +417,16 @@ textarea:focus {
     -webkit-transform: rotate(720deg);
     transform: rotate(720deg);
 }
+.socialMedia a .fas {
+    display: block;
+    color: #fffffe;
+}
+
+.socialMedia a .fas:hover {
+    color: #fffffe;
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+}
 
 
 /* 
